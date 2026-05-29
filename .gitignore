@@ -32,3 +32,5 @@ build/
 
 # Temporary screenshots or debug files
 *.png.bak
+
+.vercel

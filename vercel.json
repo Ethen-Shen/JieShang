@@ -1,26 +1,23 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
     {
-      "src": "api/**/*.js",
+      "src": "backend/server.postgres.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "server.postgres.js",
-      "use": "@vercel/node",
-      "config": {
-        "outputDirectory": "api"
-      }
     }
   ],
   "routes": [
     {
-      "src": "/api/public/(.*)",
-      "dest": "/server.postgres.js"
+      "src": "/api/(.*)",
+      "dest": "/backend/server.postgres.js"
     },
     {
-      "src": "/api/(.*)",
-      "dest": "/server.postgres.js"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ],
   "env": {
