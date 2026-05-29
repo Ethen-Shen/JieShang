@@ -1,0 +1,87 @@
+/**
+ * 口碑评价路由 - PostgreSQL版本
+ */
+const express = require('express');
+const db = require('../config/database-postgres');
+const router = express.Router();
+
+// 获取所有口碑（支持地区筛选）
+router.get('/', async (req, res) => {
+    try {
+        const { region, active } = req.query;
+        let sql = 'SELECT id, name, region, content, rating, avatar, created_at FROM testimonials';
+        const params = [];
+        const conditions = [];
+        let paramIndex = 1;
+
+        if (region) { 
+            conditions.push(`region = $${paramIndex}`); 
+            params.push(region);
+            paramIndex++;
+        }
+        if (active !== undefined) { 
+            conditions.push(`active = $${paramIndex}`); 
+            params.push(active);
+            paramIndex++;
+        }
+
+        if (conditions.length > 0) sql += ' WHERE ' + conditions.join(' AND ');
+        sql += ' ORDER BY created_at DESC LIMIT 20';
+
+        const [rows] = await db.query(sql, params);
+        res.json(rows);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// 获取单个口碑
+router.get('/:id', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM testimonials WHERE id = $1', [req.params.id]);
+        if (rows.length === 0) return res.status(404).json({ error: '未找到' });
+        res.json(rows[0]);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// 创建口碑
+router.post('/', async (req, res) => {
+    try {
+        const { name, region, content, rating, avatar, active } = req.body;
+        const sql = `INSERT INTO testimonials (name, region, content, rating, avatar, active) 
+                     VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`;
+        
+        const result = await db.query(sql, [name, region, content, rating || 5, avatar, active !== undefined ? active : 1]);
+        res.json({ success: true, id: result.rows[0].id });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// 更新口碑
+router.put('/:id', async (req, res) => {
+    try {
+        const { name, region, content, rating, avatar, active } = req.body;
+        await db.query(
+            'UPDATE testimonials SET name=$1, region=$2, content=$3, rating=$4, avatar=$5, active=$6 WHERE id=$7',
+            [name, region, content, rating, avatar, active, req.params.id]
+        );
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// 删除口碑
+router.delete('/:id', async (req, res) => {
+    try {
+        await db.query('DELETE FROM testimonials WHERE id = $1', [req.params.id]);
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+module.exports = router;
