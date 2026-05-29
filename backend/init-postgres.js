@@ -13,7 +13,7 @@
  * 8. consultation_logs - 咨询跟进记录
  */
 
-require('dotenv').config();
+require('dotenv').config({ path: '.env.local' });
 const { pool, testConnection } = require('./config/database-postgres');
 
 const initSQL = `

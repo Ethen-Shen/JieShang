@@ -10,6 +10,9 @@
 // 使用 pg 库
 const { Pool } = require('pg');
 
+// 加载环境变量（本地开发时）
+try { require('dotenv').config({ path: require('path').join(__dirname, '../../.env.local') }); } catch(e) {}
+
 // 从环境变量获取Postgres连接字符串
 // Vercel会自动注入 DATABASE_POSTGRES_URL
 const connectionString = process.env.DATABASE_POSTGRES_URL || process.env.POSTGRES_URL;
@@ -22,7 +25,8 @@ const pool = new Pool({
     },
     max: 10, // 最大连接数
     idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 2000,
+    connectionTimeoutMillis: 30000, // 增加到30秒
+    statement_timeout: 60000,
 });
 
 // 测试连接
