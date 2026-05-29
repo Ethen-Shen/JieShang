@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
+  <defs>
+    <linearGradient id="villa1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#800000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A52A2A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B22222;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="350" fill="url(#villa1)" rx="10"/>
+  <text x="250" y="160" font-family="Arial,sans-serif" font-size="32" fill="#FFD700" text-anchor="middle" font-weight="bold">🏰 豪华别墅门厅</text>
+  <text x="250" y="200" font-family="Arial,sans-serif" font-size="18" fill="#fff" text-anchor="middle">Grand Villa Entrance Hall</text>
+</svg>

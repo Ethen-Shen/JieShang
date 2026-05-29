@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8860C"/>
+      <stop offset="100%" style="stop-color:#C9A96E"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <g transform="translate(300,260)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-80" y="-50" width="160" height="100" rx="6"/>
+    <line x1="-80" y1="-10" x2="80" y2="-10"/>
+    <line x1="-40" y1="-50" x2="-40" y2="50"/>
+    <line x1="0" y1="-50" x2="0" y2="50"/>
+    <line x1="40" y1="-50" x2="40" y2="50"/>
+    <circle cx="-60" cy="-30" r="8"/>
+    <circle cx="60" cy="-30" r="8"/>
+    <rect x="-90" y="50" width="180" height="15" rx="3"/>
+  </g>
+  <text x="300" y="500" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="32" font-weight="bold">开放式厨房</text>
+  <text x="300" y="540" text-anchor="middle" fill="#D4AF37" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="20">Open Kitchen</text>
+</svg>

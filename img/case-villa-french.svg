@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#5C3D2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g transform="translate(400,250)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-90,60 L-90,-10 L-70,-10 L-70,-40 L70,-40 L70,-10 L90,-10 L90,60 Z"/>
+    <path d="M-110,-10 L0,-70 L110,-10"/>
+    <path d="M-60,-40 L0,-80 L60,-40"/>
+    <rect x="-40" y="10" width="30" height="40" rx="2"/>
+    <rect x="10" y="10" width="30" height="40" rx="2"/>
+    <line x1="-40" y1="30" x2="-10" y2="30"/>
+    <line x1="10" y1="30" x2="40" y2="30"/>
+    <circle cx="-25" cy="-25" r="8"/>
+    <circle cx="25" cy="-25" r="8"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="36" font-weight="bold">法式庄园</text>
+  <text x="400" y="520" text-anchor="middle" fill="#D4AF37" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="20">French Manor</text>
+</svg>

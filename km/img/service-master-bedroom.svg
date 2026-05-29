@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A2D6B"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <g transform="translate(300,260)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-90" y="-40" width="180" height="100" rx="6"/>
+    <rect x="-70" y="-60" width="140" height="20" rx="4"/>
+    <rect x="-70" y="60" width="30" height="15" rx="2"/>
+    <rect x="40" y="60" width="30" height="15" rx="2"/>
+    <line x1="-50" y1="-20" x2="-50" y2="20"/>
+    <line x1="50" y1="-20" x2="50" y2="20"/>
+    <rect x="-40" y="-10" width="30" height="40" rx="3"/>
+    <rect x="10" y="-10" width="30" height="40" rx="3"/>
+  </g>
+  <text x="300" y="500" text-anchor="middle" fill="#fff" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="32" font-weight="bold">主卧套房</text>
+  <text x="300" y="540" text-anchor="middle" fill="#D4AF37" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="20">Master Bedroom</text>
+</svg>

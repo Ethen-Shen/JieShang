@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3D2619;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5C3D2E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#grad2)"/>
+  <text x="300" y="210" font-family="Arial,sans-serif" font-size="36" fill="#D4AF37" text-anchor="middle" font-weight="bold">🏢 公司展厅</text>
+  <text x="300" y="255" font-family="Arial,sans-serif" font-size="18" fill="#fff" text-anchor="middle" opacity="0.9">专业设计 · 精工品质</text>
+</svg>
