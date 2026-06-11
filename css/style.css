@@ -416,6 +416,49 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 700; line-height: 
 .form-group select option { background: var(--black-soft); color: var(--white); }
 
 /* ============================================
+   FAQ SECTION
+   ============================================ */
+.faq { background: var(--gray-100); }
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 48px;
+    margin-top: 60px;
+}
+.faq-item {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 2px;
+    border-left: 3px solid var(--wine);
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
+}
+.faq-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+.faq-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--wine);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+.faq-item p {
+    font-size: 0.95rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+}
+.faq-item strong {
+    color: var(--wine);
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .faq-grid { grid-template-columns: 1fr; gap: 24px; }
+    .faq-item { padding: 24px; }
+}
+
+/* ============================================
    FOOTER - Logo 原色显示
    ============================================ */
 .footer { background: var(--black-soft); color: var(--gray-400); padding: 80px 0 0; }
