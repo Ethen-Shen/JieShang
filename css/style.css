@@ -61,6 +61,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 700; line-height: 
 }
 .section-title.light { color: var(--white); }
 .section-subtitle { font-size: 1.1rem; color: var(--gray-600); margin-top: 16px; }
+.section-subtitle.light { color: rgba(255,255,255,0.6); }
 .section-dark .section-subtitle { color: var(--gray-400); }
 
 /* ============================================
